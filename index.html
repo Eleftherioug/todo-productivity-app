@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Daymark — To-do productivity</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Daymark home"><span class="brand-mark">d</span> daymark</a>
+      <span class="today" id="today-label"></span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR SPACE TO FOCUS</p>
+      <h1 id="page-title">Make room for<br><span>what matters.</span></h1>
+      <p class="lede">A little progress each day adds up to big results.</p>
+    </section>
+
+    <section class="workspace" aria-label="Task manager">
+      <div class="summary">
+        <div><span class="summary-number" id="open-count">0</span><span class="summary-label">tasks to go</span></div>
+        <div class="progress-track" role="progressbar" aria-label="Tasks completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><span></span></div>
+        <span class="completed-count" id="completed-count">0 completed</span>
+      </div>
+
+      <form class="task-form" id="task-form">
+        <label class="sr-only" for="task-title">Add a task</label>
+        <input id="task-title" name="title" maxlength="120" placeholder="What needs your attention?" autocomplete="off" required>
+        <label class="sr-only" for="task-due">Due date (optional)</label>
+        <input id="task-due" name="due" type="date" aria-label="Due date (optional)">
+        <button class="add-button" type="submit"><span aria-hidden="true">+</span> Add task</button>
+      </form>
+
+      <div class="list-heading">
+        <h2>Your tasks</h2>
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+          <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+      </div>
+      <ul class="task-list" id="task-list" aria-live="polite"></ul>
+      <p class="empty-state" id="empty-state">Nothing here yet. Add a task to get started.</p>
+      <p class="storage-note">Your tasks are saved in this browser.</p>
+    </section>
+    <footer>One step at a time <span aria-hidden="true">✳</span></footer>
+  </main>
+</body>
+</html>

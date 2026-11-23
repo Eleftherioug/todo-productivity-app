@@ -1,42 +1,44 @@
-# todo-productivity-app
+# Daymark — To-Do Productivity App
 
-# To-Do Productivity App
+Daymark is a small, responsive task manager MVP. It demonstrates a working task workflow that can run as a static site or in a Docker container. The current MVP stores data in the browser's local storage; it does not yet include accounts, a server API, a database, or AI recommendations.
 
-## Project Description
+## MVP features
 
-The To-Do Productivity App is a web application designed to help students, professionals, and other users organize their daily responsibilities and improve productivity.
+- Add tasks with an optional due date
+- Edit task titles, mark tasks complete, and delete tasks
+- Filter the list by all, active, or completed tasks
+- See open and completed counts plus completion progress
+- Keep tasks between visits in the same browser
+- Responsive layout for desktop and mobile
 
-Users will be able to create, edit, delete, and track tasks. The application will also include an AI-powered assistant that provides task prioritization recommendations, breaks large tasks into smaller steps, and generates personalized productivity suggestions.
+## Run locally
 
-## Core Features
+Open `index.html` directly in a modern browser, or serve the project directory with any static web server. No build step or application dependencies are required.
 
-- User registration and secure login
-- Task creation, editing, and deletion
-- Task completion tracking
-- AI-powered task prioritization
-- AI task breakdown and productivity recommendations
+## Run with Docker
 
-## Technology Stack
+Build and start the Nginx container:
 
-**Frontend:** HTML, CSS, JavaScript
+```sh
+docker build -t daymark-mvp .
+docker run --rm -p 8080:80 daymark-mvp
+```
 
-**Backend:** Node.js and Express.js
+Then open <http://localhost:8080>. Docker must be installed and running.
 
-**Database:** PostgreSQL
+## Project status and next steps
 
-**AI Integration:** AI API
+The Unit 12 MVP implements the core task workflow. It is a front-end-only prototype and is not suitable for multi-user or cross-device task storage yet. Planned follow-up work includes user accounts, a backend and persistent database, AI task assistance, automated deployment, and accessibility review.
 
-**Deployment:** Google Cloud Run
+## AI usage
 
-## Project Management
+ChatGPT was used as a coding assistant to scaffold the MVP, suggest the interaction and layout structure, and draft this documentation. The generated code and instructions should be reviewed and adapted by the project author. No AI API is called by the application.
 
-This project uses Jira for Agile project management and Confluence for project documentation.
+## Project management and submission links
 
-Development is organized into two sprints:
+- GitHub repository: <https://github.com/Eleftherioug/todo-productivity-app>
+- Google Cloud deployment: not yet deployed
+- Jira project: add the public project URL here
+- Confluence space: add the public space URL here
 
-- Sprint 1: MVP Construction (Unit 12)
-- Sprint 2: Final Application (Unit 14)
-
-## Project Status
-
-Project planning and requirements definition are complete. Development will follow the planned Agile sprint structure.
+Update the final three entries with the actual deployment and public project links before submission.
