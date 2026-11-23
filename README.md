@@ -38,7 +38,7 @@ ChatGPT was used as a coding assistant to scaffold the MVP, suggest the interact
 
 - GitHub repository: <https://github.com/Eleftherioug/todo-productivity-app>
 - Google Cloud Run deployment: <https://todo-productivity-app-592279594473.us-central1.run.app>
-- Jira project: add the public project URL here
+- Jira project: <https://giorgoseleftheriou.atlassian.net/jira/software/projects/TPA/boards/1?filter=&groupBy=none>
 - Confluence space: add the public space URL here
 
-Replace the Jira and Confluence placeholders with the public project and space URLs before submission.
+Make sure the Jira project and Confluence space are publicly viewable before submission.
