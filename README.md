@@ -21,7 +21,7 @@ Build and start the Nginx container:
 
 ```sh
 docker build -t daymark-mvp .
-docker run --rm -p 8080:80 daymark-mvp
+docker run --rm -p 8080:8080 daymark-mvp
 ```
 
 Then open <http://localhost:8080>. Docker must be installed and running.
